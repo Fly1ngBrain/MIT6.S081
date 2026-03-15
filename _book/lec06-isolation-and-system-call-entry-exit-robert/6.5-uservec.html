@@ -1,0 +1,2782 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <title>6.5 uservec函数 · HonKit</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="HonKit 6.1.6">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/@honkit/honkit-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="6.6-usertrap.html" />
+    
+    
+    <link rel="prev" href="6.4-ecall-zhi-ling-zhi-hou-de-zhuang-tai.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book honkit-cloak">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../lec01-introduction-and-examples/">
+            
+                <a href="../lec01-introduction-and-examples/">
+            
+                    
+                    Lec01 Introduction and Examples (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../lec01-introduction-and-examples/1.1-ke-cheng-jian-jie.html">
+            
+                <a href="../lec01-introduction-and-examples/1.1-ke-cheng-jian-jie.html">
+            
+                    
+                    1.1 课程内容简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../lec01-introduction-and-examples/1.2-cao-zuo-xi-tong-jie-gou.html">
+            
+                <a href="../lec01-introduction-and-examples/1.2-cao-zuo-xi-tong-jie-gou.html">
+            
+                    
+                    1.2 操作系统结构
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../lec01-introduction-and-examples/1.3-why-hard-and-interesting.html">
+            
+                <a href="../lec01-introduction-and-examples/1.3-why-hard-and-interesting.html">
+            
+                    
+                    1.3 Why Hard and Interesting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../lec01-introduction-and-examples/1.4-ke-cheng-zi-yuan.html">
+            
+                <a href="../lec01-introduction-and-examples/1.4-ke-cheng-zi-yuan.html">
+            
+                    
+                    1.4 课程结构和资源
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../lec01-introduction-and-examples/1.5-some-systemcalls.html">
+            
+                <a href="../lec01-introduction-and-examples/1.5-some-systemcalls.html">
+            
+                    
+                    1.5 read, write, exit系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../lec01-introduction-and-examples/1.6-open-xi-tong-tiao-yong.html">
+            
+                <a href="../lec01-introduction-and-examples/1.6-open-xi-tong-tiao-yong.html">
+            
+                    
+                    1.6 open系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.7" data-path="../lec01-introduction-and-examples/1.7-shell.html">
+            
+                <a href="../lec01-introduction-and-examples/1.7-shell.html">
+            
+                    
+                    1.7 Shell
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.8" data-path="../lec01-introduction-and-examples/1.8-fork.html">
+            
+                <a href="../lec01-introduction-and-examples/1.8-fork.html">
+            
+                    
+                    1.8 fork系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.9" data-path="../lec01-introduction-and-examples/1.9-exec-and-wait-systemcall.html">
+            
+                <a href="../lec01-introduction-and-examples/1.9-exec-and-wait-systemcall.html">
+            
+                    
+                    1.9 exec, wait系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.10" data-path="../lec01-introduction-and-examples/1.10-io-redirect.html">
+            
+                <a href="../lec01-introduction-and-examples/1.10-io-redirect.html">
+            
+                    
+                    1.10 I/O Redirect
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../lec03-os-organization-and-system-calls/">
+            
+                <a href="../lec03-os-organization-and-system-calls/">
+            
+                    
+                    Lec03 OS Organization and System Calls (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../lec03-os-organization-and-system-calls/3.1-shang-jie-ke-hui-gu.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.1-shang-jie-ke-hui-gu.html">
+            
+                    
+                    3.1 上一节课回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../lec03-os-organization-and-system-calls/3.2-cao-zuo-xi-tong-ge-li-xing-isolation.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.2-cao-zuo-xi-tong-ge-li-xing-isolation.html">
+            
+                    
+                    3.2 操作系统隔离性（isolation）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../lec03-os-organization-and-system-calls/3.3-cao-zuo-xi-tong-fang-yu-xing-defensive.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.3-cao-zuo-xi-tong-fang-yu-xing-defensive.html">
+            
+                    
+                    3.3 操作系统防御性（Defensive）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../lec03-os-organization-and-system-calls/3.4-ying-jian-dui-yu-qiang-ge-li-de-zhi-chi.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.4-ying-jian-dui-yu-qiang-ge-li-de-zhi-chi.html">
+            
+                    
+                    3.4 硬件对于强隔离的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../lec03-os-organization-and-system-calls/3.5-user-kernel-mode-switch.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.5-user-kernel-mode-switch.html">
+            
+                    
+                    3.5 User/Kernel mode切换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../lec03-os-organization-and-system-calls/3.6-monolithic-kernel-vs-micro-kernel.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.6-monolithic-kernel-vs-micro-kernel.html">
+            
+                    
+                    3.6 宏内核 vs 微内核 （Monolithic Kernel vs Micro Kernel）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.7" data-path="../lec03-os-organization-and-system-calls/3.7-bian-yi-yun-xing-kernel.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.7-bian-yi-yun-xing-kernel.html">
+            
+                    
+                    3.7 编译运行kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.8" data-path="../lec03-os-organization-and-system-calls/3.8-qemu.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.8-qemu.html">
+            
+                    
+                    3.8 QEMU
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.9" data-path="../lec03-os-organization-and-system-calls/3.9-xv6-qi-dong-guo-cheng.html">
+            
+                <a href="../lec03-os-organization-and-system-calls/3.9-xv6-qi-dong-guo-cheng.html">
+            
+                    
+                    3.9 XV6 启动过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4" data-path="../lec04-page-tables-frans/">
+            
+                <a href="../lec04-page-tables-frans/">
+            
+                    
+                    Lec04 Page tables (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.4.1" data-path="../lec04-page-tables-frans/4.1-ke-cheng-nei-rong-jian-jie.html">
+            
+                <a href="../lec04-page-tables-frans/4.1-ke-cheng-nei-rong-jian-jie.html">
+            
+                    
+                    4.1 课程内容简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.2" data-path="../lec04-page-tables-frans/4.2-di-zhi-kong-jian-address-spaces.html">
+            
+                <a href="../lec04-page-tables-frans/4.2-di-zhi-kong-jian-address-spaces.html">
+            
+                    
+                    4.2 地址空间（Address Spaces）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.3" data-path="../lec04-page-tables-frans/4.3-ye-biao-page-table.html">
+            
+                <a href="../lec04-page-tables-frans/4.3-ye-biao-page-table.html">
+            
+                    
+                    4.3 页表（Page Table）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.4" data-path="../lec04-page-tables-frans/4.4-ye-biao-huan-cun-translation-lookaside-buffer.html">
+            
+                <a href="../lec04-page-tables-frans/4.4-ye-biao-huan-cun-translation-lookaside-buffer.html">
+            
+                    
+                    4.4 页表缓存（Translation Lookaside Buffer）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.5" data-path="../lec04-page-tables-frans/4.5-kernel-page-table.html">
+            
+                <a href="../lec04-page-tables-frans/4.5-kernel-page-table.html">
+            
+                    
+                    4.5 Kernel Page Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.6" data-path="../lec04-page-tables-frans/4.6-kvminit-han-shu.html">
+            
+                <a href="../lec04-page-tables-frans/4.6-kvminit-han-shu.html">
+            
+                    
+                    4.6 kvminit 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.7" data-path="../lec04-page-tables-frans/4.7-kvminithart.html">
+            
+                <a href="../lec04-page-tables-frans/4.7-kvminithart.html">
+            
+                    
+                    4.7 kvminithart 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.4.8" data-path="../lec04-page-tables-frans/4.8-walk-han-shu.html">
+            
+                <a href="../lec04-page-tables-frans/4.8-walk-han-shu.html">
+            
+                    
+                    4.8 walk 函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5" data-path="../lec05-calling-conventions-and-stack-frames-risc-v/">
+            
+                <a href="../lec05-calling-conventions-and-stack-frames-risc-v/">
+            
+                    
+                    Lec05 Calling conventions and stack frames RISC-V (TA)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.5.1" data-path="../lec05-calling-conventions-and-stack-frames-risc-v/5.1-introduction-to-lecture05.html">
+            
+                <a href="../lec05-calling-conventions-and-stack-frames-risc-v/5.1-introduction-to-lecture05.html">
+            
+                    
+                    5.1 C程序到汇编程序的转换
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.2" data-path="../lec05-calling-conventions-and-stack-frames-risc-v/5.2-risc-v-vs-x86.html">
+            
+                <a href="../lec05-calling-conventions-and-stack-frames-risc-v/5.2-risc-v-vs-x86.html">
+            
+                    
+                    5.2 RISC-V vs x86
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.3" data-path="../lec05-calling-conventions-and-stack-frames-risc-v/5.3-gdb-he-hui-bian-dai-ma-zhi-hang.html">
+            
+                <a href="../lec05-calling-conventions-and-stack-frames-risc-v/5.3-gdb-he-hui-bian-dai-ma-zhi-hang.html">
+            
+                    
+                    5.3 gdb和汇编代码执行
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.4" data-path="../lec05-calling-conventions-and-stack-frames-risc-v/5.4-risc-v-ji-cun-qi.html">
+            
+                <a href="../lec05-calling-conventions-and-stack-frames-risc-v/5.4-risc-v-ji-cun-qi.html">
+            
+                    
+                    5.4 RISC-V寄存器
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.5" data-path="../lec05-calling-conventions-and-stack-frames-risc-v/5.5-stack.html">
+            
+                <a href="../lec05-calling-conventions-and-stack-frames-risc-v/5.5-stack.html">
+            
+                    
+                    5.5 Stack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.5.6" data-path="../lec05-calling-conventions-and-stack-frames-risc-v/5.6-struct.html">
+            
+                <a href="../lec05-calling-conventions-and-stack-frames-risc-v/5.6-struct.html">
+            
+                    
+                    5.6 Struct
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    Lec06 Isolation & system call entry/exit (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.6.1" data-path="6.1-trap.html">
+            
+                <a href="6.1-trap.html">
+            
+                    
+                    6.1 Trap机制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.2" data-path="6.2-trap-dai-ma-zhi-xing-liu-cheng.html">
+            
+                <a href="6.2-trap-dai-ma-zhi-xing-liu-cheng.html">
+            
+                    
+                    6.2 Trap代码执行流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.3" data-path="6.3-before-ecall.html">
+            
+                <a href="6.3-before-ecall.html">
+            
+                    
+                    6.3 ECALL指令之前的状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.4" data-path="6.4-ecall-zhi-ling-zhi-hou-de-zhuang-tai.html">
+            
+                <a href="6.4-ecall-zhi-ling-zhi-hou-de-zhuang-tai.html">
+            
+                    
+                    6.4 ECALL指令之后的状态
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.6.5" data-path="6.5-uservec.html">
+            
+                <a href="6.5-uservec.html">
+            
+                    
+                    6.5 uservec函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.6" data-path="6.6-usertrap.html">
+            
+                <a href="6.6-usertrap.html">
+            
+                    
+                    6.6 usertrap函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.7" data-path="6.7-usertrapret.html">
+            
+                <a href="6.7-usertrapret.html">
+            
+                    
+                    6.7 usertrapret函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.6.8" data-path="6.8-userret.html">
+            
+                <a href="6.8-userret.html">
+            
+                    
+                    6.8 userret函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7" data-path="../lec08-page-faults-frans/">
+            
+                <a href="../lec08-page-faults-frans/">
+            
+                    
+                    Lec08 Page faults (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.7.1" data-path="../lec08-page-faults-frans/8.1-page-fault-basics.html">
+            
+                <a href="../lec08-page-faults-frans/8.1-page-fault-basics.html">
+            
+                    
+                    8.1 Page Fault Basics
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../lec08-page-faults-frans/8.2-lazy-page-allocation.html">
+            
+                <a href="../lec08-page-faults-frans/8.2-lazy-page-allocation.html">
+            
+                    
+                    8.2 Lazy page allocation
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../lec08-page-faults-frans/8.3-zero-fill-on-demand.html">
+            
+                <a href="../lec08-page-faults-frans/8.3-zero-fill-on-demand.html">
+            
+                    
+                    8.3 Zero Fill On Demand
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../lec08-page-faults-frans/8.4-copy-on-write-fork.html">
+            
+                <a href="../lec08-page-faults-frans/8.4-copy-on-write-fork.html">
+            
+                    
+                    8.4 Copy On Write Fork
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../lec08-page-faults-frans/8.5-demand-paging.html">
+            
+                <a href="../lec08-page-faults-frans/8.5-demand-paging.html">
+            
+                    
+                    8.5 Demand Paging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../lec08-page-faults-frans/8.6-memory-mapped-files.html">
+            
+                <a href="../lec08-page-faults-frans/8.6-memory-mapped-files.html">
+            
+                    
+                    8.6 Memory Mapped Files
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../lec09-interrupts/">
+            
+                <a href="../lec09-interrupts/">
+            
+                    
+                    Lec09 Interrupts (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../lec09-interrupts/9.1-memory-in-real-os.html">
+            
+                <a href="../lec09-interrupts/9.1-memory-in-real-os.html">
+            
+                    
+                    9.1 真实操作系统内存使用情况
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../lec09-interrupts/9.2-interrupt-handware.html">
+            
+                <a href="../lec09-interrupts/9.2-interrupt-handware.html">
+            
+                    
+                    9.2 Interrupt硬件部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.3" data-path="../lec09-interrupts/9.3-device-driver.html">
+            
+                <a href="../lec09-interrupts/9.3-device-driver.html">
+            
+                    
+                    9.3 设备驱动概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.4" data-path="../lec09-interrupts/9.4-xv6-set-interrupt.html">
+            
+                <a href="../lec09-interrupts/9.4-xv6-set-interrupt.html">
+            
+                    
+                    9.4 在XV6中设置中断
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../lec09-interrupts/9.5-uart-driver-top.html">
+            
+                <a href="../lec09-interrupts/9.5-uart-driver-top.html">
+            
+                    
+                    9.5 UART驱动的top部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.6" data-path="../lec09-interrupts/9.6-uart-driver-bottom.html">
+            
+                <a href="../lec09-interrupts/9.6-uart-driver-bottom.html">
+            
+                    
+                    9.6 UART驱动的bottom部分
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.7" data-path="../lec09-interrupts/9.7-interrupt-related-concurrency.html">
+            
+                <a href="../lec09-interrupts/9.7-interrupt-related-concurrency.html">
+            
+                    
+                    9.7 Interrupt相关的并发
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.8" data-path="../lec09-interrupts/9.8-uart-read-keyboard.html">
+            
+                <a href="../lec09-interrupts/9.8-uart-read-keyboard.html">
+            
+                    
+                    9.8 UART读取键盘输入
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.9" data-path="../lec09-interrupts/9.9-interrupt-envolving.html">
+            
+                <a href="../lec09-interrupts/9.9-interrupt-envolving.html">
+            
+                    
+                    9.9 Interrupt的演进
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9" data-path="../lec10-multiprocessors-and-locking/">
+            
+                <a href="../lec10-multiprocessors-and-locking/">
+            
+                    
+                    Lec10 Multiprocessors and locking (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.9.1" data-path="../lec10-multiprocessors-and-locking/10.1-why-lock.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.1-why-lock.html">
+            
+                    
+                    10.1 为什么要使用锁？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.2" data-path="../lec10-multiprocessors-and-locking/10.2-avoid-race-condition.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.2-avoid-race-condition.html">
+            
+                    
+                    10.2 锁如何避免race condition？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.3" data-path="../lec10-multiprocessors-and-locking/10.3-when-use-lock.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.3-when-use-lock.html">
+            
+                    
+                    10.3 什么时候使用锁？
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.4" data-path="../lec10-multiprocessors-and-locking/10.4-locks-properties-and-deadlock.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.4-locks-properties-and-deadlock.html">
+            
+                    
+                    10.4 锁的特性和死锁
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.5" data-path="../lec10-multiprocessors-and-locking/10.5-suo-yu-xing-neng.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.5-suo-yu-xing-neng.html">
+            
+                    
+                    10.5 锁与性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.6" data-path="../lec10-multiprocessors-and-locking/10.6-case-study-uart.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.6-case-study-uart.html">
+            
+                    
+                    10.6 XV6中UART模块对于锁的使用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.7" data-path="../lec10-multiprocessors-and-locking/10.7-spin-lock-1.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.7-spin-lock-1.html">
+            
+                    
+                    10.7 自旋锁（Spin lock）的实现（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.9.8" data-path="../lec10-multiprocessors-and-locking/10.8-spin-lock-2.html">
+            
+                <a href="../lec10-multiprocessors-and-locking/10.8-spin-lock-2.html">
+            
+                    
+                    10.8 自旋锁（Spin lock）的实现（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10" data-path="../lec11-thread-switching-robert/">
+            
+                <a href="../lec11-thread-switching-robert/">
+            
+                    
+                    Lec11 Thread switching (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.10.1" data-path="../lec11-thread-switching-robert/11.1-thread.html">
+            
+                <a href="../lec11-thread-switching-robert/11.1-thread.html">
+            
+                    
+                    11.1 线程（Thread）概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.2" data-path="../lec11-thread-switching-robert/11.2-xian-cheng-diao-du.html">
+            
+                <a href="../lec11-thread-switching-robert/11.2-xian-cheng-diao-du.html">
+            
+                    
+                    11.2 XV6线程调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.3" data-path="../lec11-thread-switching-robert/11.3-xv6-thread-switching-1.html">
+            
+                <a href="../lec11-thread-switching-robert/11.3-xv6-thread-switching-1.html">
+            
+                    
+                    11.3 XV6线程切换（一）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.4" data-path="../lec11-thread-switching-robert/11.4-xv6-thread-switching-2.html">
+            
+                <a href="../lec11-thread-switching-robert/11.4-xv6-thread-switching-2.html">
+            
+                    
+                    11.4 XV6线程切换（二）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.5" data-path="../lec11-thread-switching-robert/11.5-xv6-thread-switching-code.html">
+            
+                <a href="../lec11-thread-switching-robert/11.5-xv6-thread-switching-code.html">
+            
+                    
+                    11.5 XV6进程切换示例程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.6" data-path="../lec11-thread-switching-robert/11.6-yield-and-sched.html">
+            
+                <a href="../lec11-thread-switching-robert/11.6-yield-and-sched.html">
+            
+                    
+                    11.6 XV6线程切换 --- yield/sched函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.7" data-path="../lec11-thread-switching-robert/11.7-xv6-switch-function.html">
+            
+                <a href="../lec11-thread-switching-robert/11.7-xv6-switch-function.html">
+            
+                    
+                    11.7 XV6线程切换 --- switch函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.8" data-path="../lec11-thread-switching-robert/11.8-xv6-scheduler-function.html">
+            
+                <a href="../lec11-thread-switching-robert/11.8-xv6-scheduler-function.html">
+            
+                    
+                    11.8 XV6线程切换 --- scheduler函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.10.9" data-path="../lec11-thread-switching-robert/11.9-xv6-call-switch-function-first-time.html">
+            
+                <a href="../lec11-thread-switching-robert/11.9-xv6-call-switch-function-first-time.html">
+            
+                    
+                    11.9 XV6线程第一次调用switch函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11" data-path="../lec13-sleep-and-wakeup-robert/">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/">
+            
+                    
+                    Lec13 Sleep & Wake up (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.11.1" data-path="../lec13-sleep-and-wakeup-robert/13.1-lock-limitation-during-thread-switching.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.1-lock-limitation-during-thread-switching.html">
+            
+                    
+                    13.1 线程切换过程中锁的限制
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.2" data-path="../lec13-sleep-and-wakeup-robert/13.2-sleep-wakeup.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.2-sleep-wakeup.html">
+            
+                    
+                    13.2 Sleep&Wakeup 接口
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.3" data-path="../lec13-sleep-and-wakeup-robert/13.3-lost-wakeup.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.3-lost-wakeup.html">
+            
+                    
+                    13.3 Lost wakeup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.4" data-path="../lec13-sleep-and-wakeup-robert/13.4-avoid-lock-wakeup.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.4-avoid-lock-wakeup.html">
+            
+                    
+                    13.4 如何避免Lost wakeup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.5" data-path="../lec13-sleep-and-wakeup-robert/13.5-sleep-and-wakeup-in-pipe.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.5-sleep-and-wakeup-in-pipe.html">
+            
+                    
+                    13.5 Pipe中的sleep和wakeup
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.6" data-path="../lec13-sleep-and-wakeup-robert/13.6-exit-systemcall.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.6-exit-systemcall.html">
+            
+                    
+                    13.6 exit系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.7" data-path="../lec13-sleep-and-wakeup-robert/13.7-wait-systemcall.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.7-wait-systemcall.html">
+            
+                    
+                    13.7 wait系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.11.8" data-path="../lec13-sleep-and-wakeup-robert/13.8-kill-systemcall.html">
+            
+                <a href="../lec13-sleep-and-wakeup-robert/13.8-kill-systemcall.html">
+            
+                    
+                    13.8 kill系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12" data-path="../lec14-file-systems-frans/">
+            
+                <a href="../lec14-file-systems-frans/">
+            
+                    
+                    Lec14 File systems (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.12.1" data-path="../lec14-file-systems-frans/14.1-why-interesting.html">
+            
+                <a href="../lec14-file-systems-frans/14.1-why-interesting.html">
+            
+                    
+                    14.1 Why Interesting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.2" data-path="../lec14-file-systems-frans/14.2-file-system-api.html">
+            
+                <a href="../lec14-file-systems-frans/14.2-file-system-api.html">
+            
+                    
+                    14.2 File system实现概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.3" data-path="../lec14-file-systems-frans/14.3-how-file-system-uses-disk.html">
+            
+                <a href="../lec14-file-systems-frans/14.3-how-file-system-uses-disk.html">
+            
+                    
+                    14.3 How file system uses disk
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.4" data-path="../lec14-file-systems-frans/14.4-inode.html">
+            
+                <a href="../lec14-file-systems-frans/14.4-inode.html">
+            
+                    
+                    14.4 inode
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.5" data-path="../lec14-file-systems-frans/14.5-file-system-example.html">
+            
+                <a href="../lec14-file-systems-frans/14.5-file-system-example.html">
+            
+                    
+                    14.5 File system工作示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.6" data-path="../lec14-file-systems-frans/14.6-xv6-code-inode.html">
+            
+                <a href="../lec14-file-systems-frans/14.6-xv6-code-inode.html">
+            
+                    
+                    14.6 XV6创建inode代码展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.12.7" data-path="../lec14-file-systems-frans/14.7-sleep-lock.html">
+            
+                <a href="../lec14-file-systems-frans/14.7-sleep-lock.html">
+            
+                    
+                    14.7 Sleep Lock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13" data-path="../lec15-crash-recovery-frans/">
+            
+                <a href="../lec15-crash-recovery-frans/">
+            
+                    
+                    Lec15 Crash recovery (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.13.1" data-path="../lec15-crash-recovery-frans/15.1-file-system-crash-gaishu.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.1-file-system-crash-gaishu.html">
+            
+                    
+                    15.1 File system crash概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.2" data-path="../lec15-crash-recovery-frans/15.2-file-system-crash-shi-li.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.2-file-system-crash-shi-li.html">
+            
+                    
+                    15.2 File system crash示例
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.3" data-path="../lec15-crash-recovery-frans/15.3-file-system-logging.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.3-file-system-logging.html">
+            
+                    
+                    15.3 File system logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.4" data-path="../lec15-crash-recovery-frans/15.4-log-write-han-shu.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.4-log-write-han-shu.html">
+            
+                    
+                    15.4 log_write函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.5" data-path="../lec15-crash-recovery-frans/15.5-endop-han-shu.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.5-endop-han-shu.html">
+            
+                    
+                    15.5 end_op函数
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.6" data-path="../lec15-crash-recovery-frans/15.6-file-system-recovering.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.6-file-system-recovering.html">
+            
+                    
+                    15.6 File system recovering
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.7" data-path="../lec15-crash-recovery-frans/15.7-log-xie-ci-pan-liu-cheng.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.7-log-xie-ci-pan-liu-cheng.html">
+            
+                    
+                    15.7 Log写磁盘流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.13.8" data-path="../lec15-crash-recovery-frans/15.8-file-system-challenges.html">
+            
+                <a href="../lec15-crash-recovery-frans/15.8-file-system-challenges.html">
+            
+                    
+                    15.8 File system challenges
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/">
+            
+                    
+                    Lec16  File system performance and fast crash recovery (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.14.1" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.1-why-logging.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.1-why-logging.html">
+            
+                    
+                    16.1 Why logging
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.2" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.2-xv6-file-system-logging-hui-gu.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.2-xv6-file-system-logging-hui-gu.html">
+            
+                    
+                    16.2 XV6 File system logging回顾
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.3" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.3-ext3-file-system-log-format.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.3-ext3-file-system-log-format.html">
+            
+                    
+                    16.3 ext3 file system log format
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.4" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.4-ext3-ru-he-ti-sheng-xing-neng.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.4-ext3-ru-he-ti-sheng-xing-neng.html">
+            
+                    
+                    16.4 ext3如何提升性能
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.5" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.5-ext3-wen-jian-xi-tong-diao-yong-ge-shi.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.5-ext3-wen-jian-xi-tong-diao-yong-ge-shi.html">
+            
+                    
+                    16.5 ext3文件系统调用格式
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.6" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.6-ext3-transaction-commit-bu-zhou.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.6-ext3-transaction-commit-bu-zhou.html">
+            
+                    
+                    16.6 ext3 transaction commit步骤
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.7" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.7-file-system-hui-fu-guo-cheng.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.7-file-system-hui-fu-guo-cheng.html">
+            
+                    
+                    16.7 ext3 file system恢复过程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.8" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.8-transaction-concurrency.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.8-transaction-concurrency.html">
+            
+                    
+                    16.8 为什么新transaction需要等前一个transaction中系统调用执行完成
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.14.9" data-path="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.9-zong-jie.html">
+            
+                <a href="../lec16-file-system-performance-and-fast-crash-recovery-robert/16.9-zong-jie.html">
+            
+                    
+                    16.9 总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15" data-path="../lec17-virtual-memory-for-applications-frans/">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/">
+            
+                    
+                    Lec17 Virtual memory for applications (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.15.1" data-path="../lec17-virtual-memory-for-applications-frans/17.1-ying-yong-cheng-xu-shi-yong-xu-ni-nei-cun-suo-xu-yao-de-te-xing.html">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/17.1-ying-yong-cheng-xu-shi-yong-xu-ni-nei-cun-suo-xu-yao-de-te-xing.html">
+            
+                    
+                    17.1 应用程序使用虚拟内存所需要的特性
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.2" data-path="../lec17-virtual-memory-for-applications-frans/17.2-zhi-chi-ying-yong-cheng-xu-shi-yong-xu-ni-nei-cun-de-xi-tong-tiao-yong.html">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/17.2-zhi-chi-ying-yong-cheng-xu-shi-yong-xu-ni-nei-cun-de-xi-tong-tiao-yong.html">
+            
+                    
+                    17.2 支持应用程序使用虚拟内存的系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.3" data-path="../lec17-virtual-memory-for-applications-frans/17.3-xu-ni-nei-cun-xi-tong-zhi-chi-yong-hu-cheng-xu.html">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/17.3-xu-ni-nei-cun-xi-tong-zhi-chi-yong-hu-cheng-xu.html">
+            
+                    
+                    17.3 虚拟内存系统如何支持用户应用程序
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.4" data-path="../lec17-virtual-memory-for-applications-frans/17.4-build-large-cache.html">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/17.4-build-large-cache.html">
+            
+                    
+                    17.4 构建大的缓存表
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.5" data-path="../lec17-virtual-memory-for-applications-frans/17.5-bakers-garbage-collector.html">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/17.5-bakers-garbage-collector.html">
+            
+                    
+                    17.5 Baker's Real-Time Copying Garbage Collector
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.6" data-path="../lec17-virtual-memory-for-applications-frans/17.6-shi-yong-xu-ni-nei-cun-te-xing-de-gc.html">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/17.6-shi-yong-xu-ni-nei-cun-te-xing-de-gc.html">
+            
+                    
+                    17.6 使用虚拟内存特性的GC
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.15.7" data-path="../lec17-virtual-memory-for-applications-frans/17.7-shi-yong-xu-ni-nei-cun-te-xing-de-gc-dai-ma-zhan-shi.html">
+            
+                <a href="../lec17-virtual-memory-for-applications-frans/17.7-shi-yong-xu-ni-nei-cun-te-xing-de-gc-dai-ma-zhan-shi.html">
+            
+                    
+                    17.7 使用虚拟内存特性的GC代码展示
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16" data-path="../lec18-os-organization-robert/">
+            
+                <a href="../lec18-os-organization-robert/">
+            
+                    
+                    Lec18 OS organization (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.16.1" data-path="../lec18-os-organization-robert/18.1-monolithic-kernel.html">
+            
+                <a href="../lec18-os-organization-robert/18.1-monolithic-kernel.html">
+            
+                    
+                    18.1 Monolithic kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.2" data-path="../lec18-os-organization-robert/18.2-micro-kernel.html">
+            
+                <a href="../lec18-os-organization-robert/18.2-micro-kernel.html">
+            
+                    
+                    18.2 Micro kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.3" data-path="../lec18-os-organization-robert/18.3-why-micro-kernel.html">
+            
+                <a href="../lec18-os-organization-robert/18.3-why-micro-kernel.html">
+            
+                    
+                    18.3 Why micro kernel?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.4" data-path="../lec18-os-organization-robert/18.4-l4-micro-kernel.html">
+            
+                <a href="../lec18-os-organization-robert/18.4-l4-micro-kernel.html">
+            
+                    
+                    18.4 L4 micro kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.5" data-path="../lec18-os-organization-robert/18.5-improving-ipc-by-kernel-design.html">
+            
+                <a href="../lec18-os-organization-robert/18.5-improving-ipc-by-kernel-design.html">
+            
+                    
+                    18.5 Improving IPC by Kernel Design
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.6" data-path="../lec18-os-organization-robert/18.6-run-linux-on-top-of-l4-micro-kernel.html">
+            
+                <a href="../lec18-os-organization-robert/18.6-run-linux-on-top-of-l4-micro-kernel.html">
+            
+                    
+                    18.6 Run Linux on top of L4 micro kernel
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.16.7" data-path="../lec18-os-organization-robert/18.7-l4-linux-performance.html">
+            
+                <a href="../lec18-os-organization-robert/18.7-l4-linux-performance.html">
+            
+                    
+                    18.7 L4 Linux性能分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17" data-path="../lec19-virtual-machines-robert/">
+            
+                <a href="../lec19-virtual-machines-robert/">
+            
+                    
+                    Lec19 Virtual Machines (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.17.1" data-path="../lec19-virtual-machines-robert/19.1-why-virtual-machine.html">
+            
+                <a href="../lec19-virtual-machines-robert/19.1-why-virtual-machine.html">
+            
+                    
+                    19.1 Why Virtual Machine?
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.2" data-path="../lec19-virtual-machines-robert/19.2-trap-and-emulate-trap.html">
+            
+                <a href="../lec19-virtual-machines-robert/19.2-trap-and-emulate-trap.html">
+            
+                    
+                    19.2 Trap-and-Emulate --- Trap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.3" data-path="../lec19-virtual-machines-robert/19.3-trap-and-emulate-emulate.html">
+            
+                <a href="../lec19-virtual-machines-robert/19.3-trap-and-emulate-emulate.html">
+            
+                    
+                    19.3 Trap-and-Emulate --- Emulate
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.4" data-path="../lec19-virtual-machines-robert/19.4-trap-and-emulate-page-table.html">
+            
+                <a href="../lec19-virtual-machines-robert/19.4-trap-and-emulate-page-table.html">
+            
+                    
+                    19.4 Trap-and-Emulate --- Page Table
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.5" data-path="../lec19-virtual-machines-robert/19.5-trap-and-emulate-devices.html">
+            
+                <a href="../lec19-virtual-machines-robert/19.5-trap-and-emulate-devices.html">
+            
+                    
+                    19.5 Trap-and-Emulate --- Devices
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.6" data-path="../lec19-virtual-machines-robert/19.6-ying-jian-dui-xu-ni-ji-de-zhi-chi.html">
+            
+                <a href="../lec19-virtual-machines-robert/19.6-ying-jian-dui-xu-ni-ji-de-zhi-chi.html">
+            
+                    
+                    19.6 硬件对虚拟机的支持
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.17.7" data-path="../lec19-virtual-machines-robert/19.7-dune.html">
+            
+                <a href="../lec19-virtual-machines-robert/19.7-dune.html">
+            
+                    
+                    19.7 Dune: Safe User-level Access to Privileged CPU Features
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18" data-path="../lec20-kernels-and-hll-frans/">
+            
+                <a href="../lec20-kernels-and-hll-frans/">
+            
+                    
+                    Lec20 Kernels and HLL (Frans)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.18.1" data-path="../lec20-kernels-and-hll-frans/20.1-c-yu-yan-shi-xian-cao-zuo-xi-tong-de-you-lie-shi.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.1-c-yu-yan-shi-xian-cao-zuo-xi-tong-de-you-lie-shi.html">
+            
+                    
+                    20.1 C语言实现操作系统的优劣势
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.2" data-path="../lec20-kernels-and-hll-frans/20.2-gao-ji-bian-cheng-yu-yan-shi-xian-cao-zuo-xi-tong-de-you-lie-shi.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.2-gao-ji-bian-cheng-yu-yan-shi-xian-cao-zuo-xi-tong-de-you-lie-shi.html">
+            
+                    
+                    20.2 高级编程语言实现操作系统的优劣势
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.3" data-path="../lec20-kernels-and-hll-frans/20.3-choose-golang.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.3-choose-golang.html">
+            
+                    
+                    20.3 高级编程语言选择 --- Golang
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.4" data-path="../lec20-kernels-and-hll-frans/20.4-biscuit.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.4-biscuit.html">
+            
+                    
+                    20.4 Biscuit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.5" data-path="../lec20-kernels-and-hll-frans/20.5-heap-exhaustion.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.5-heap-exhaustion.html">
+            
+                    
+                    20.5 Heap exhaustion
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.6" data-path="../lec20-kernels-and-hll-frans/20.6-heap-exhaustion-solution.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.6-heap-exhaustion-solution.html">
+            
+                    
+                    20.6 Heap exhaustion solution
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.7" data-path="../lec20-kernels-and-hll-frans/20.7-evaluation-hll-benefits.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.7-evaluation-hll-benefits.html">
+            
+                    
+                    20.7 Evaluation: HLL benefits
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.8" data-path="../lec20-kernels-and-hll-frans/20.8-evaluation-hll-performance-cost-1.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.8-evaluation-hll-performance-cost-1.html">
+            
+                    
+                    20.8 Evaluation: HLL performance cost(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.9" data-path="../lec20-kernels-and-hll-frans/20.9-evaluation-hll-performance-cost-2.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.9-evaluation-hll-performance-cost-2.html">
+            
+                    
+                    20.9 Evaluation: HLL performance cost(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.18.10" data-path="../lec20-kernels-and-hll-frans/20.10-should-one-use-hll-for-a-new-kernel.html">
+            
+                <a href="../lec20-kernels-and-hll-frans/20.10-should-one-use-hll-for-a-new-kernel.html">
+            
+                    
+                    20.10 Should one use HLL for a new kernel?
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19" data-path="../lec21-networking-robert/">
+            
+                <a href="../lec21-networking-robert/">
+            
+                    
+                    Lec21 Networking (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.19.1" data-path="../lec21-networking-robert/21.1-ji-suan-ji-wang-luo-gai-shu.html">
+            
+                <a href="../lec21-networking-robert/21.1-ji-suan-ji-wang-luo-gai-shu.html">
+            
+                    
+                    21.1计算机网络概述
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.2" data-path="../lec21-networking-robert/21.2-er-ceng-wang-luo-ethernet.html">
+            
+                <a href="../lec21-networking-robert/21.2-er-ceng-wang-luo-ethernet.html">
+            
+                    
+                    21.2 二层网络 --- Ethernet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.3" data-path="../lec21-networking-robert/21.3-er-san-ceng-di-zhi-zhuan-huan-arp.html">
+            
+                <a href="../lec21-networking-robert/21.3-er-san-ceng-di-zhi-zhuan-huan-arp.html">
+            
+                    
+                    21.3 二/三层地址转换 --- ARP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.4" data-path="../lec21-networking-robert/21.4-san-ceng-wang-luo-internet.html">
+            
+                <a href="../lec21-networking-robert/21.4-san-ceng-wang-luo-internet.html">
+            
+                    
+                    21.4 三层网络 --- Internet
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.5" data-path="../lec21-networking-robert/21.5-si-ceng-wang-luo-udp.html">
+            
+                <a href="../lec21-networking-robert/21.5-si-ceng-wang-luo-udp.html">
+            
+                    
+                    21.5 四层网络 --- UDP
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.6" data-path="../lec21-networking-robert/21.6-wang-lu-xie-yi-zhan-network-stack.html">
+            
+                <a href="../lec21-networking-robert/21.6-wang-lu-xie-yi-zhan-network-stack.html">
+            
+                    
+                    21.6 网络协议栈（Network Stack）
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.7" data-path="../lec21-networking-robert/21.7-ring-buffer.html">
+            
+                <a href="../lec21-networking-robert/21.7-ring-buffer.html">
+            
+                    
+                    21.7 Ring Buffer
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.8" data-path="../lec21-networking-robert/21.8-receive-livelock.html">
+            
+                <a href="../lec21-networking-robert/21.8-receive-livelock.html">
+            
+                    
+                    21.8 Receive Livelock
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.19.9" data-path="../lec21-networking-robert/21.9-ru-he-jie-jue-livelock.html">
+            
+                <a href="../lec21-networking-robert/21.9-ru-he-jie-jue-livelock.html">
+            
+                    
+                    21.9 如何解决Livelock
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20" data-path="../lec22-meltdown-robert/">
+            
+                <a href="../lec22-meltdown-robert/">
+            
+                    
+                    Lec22 Meltdown (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.20.1" data-path="../lec22-meltdown-robert/22.1-meltdown-fa-sheng-de-bei-jing.html">
+            
+                <a href="../lec22-meltdown-robert/22.1-meltdown-fa-sheng-de-bei-jing.html">
+            
+                    
+                    22.1 Meltdown发生的背景
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.2" data-path="../lec22-meltdown-robert/22.2-speculative-execution-1.html">
+            
+                <a href="../lec22-meltdown-robert/22.2-speculative-execution-1.html">
+            
+                    
+                    22.2 Speculative execution(1)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.3" data-path="../lec22-meltdown-robert/22.3-speculative-execution-2.html">
+            
+                <a href="../lec22-meltdown-robert/22.3-speculative-execution-2.html">
+            
+                    
+                    22.3 Speculative execution(2)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.4" data-path="../lec22-meltdown-robert/22.4-cpu-caches.html">
+            
+                <a href="../lec22-meltdown-robert/22.4-cpu-caches.html">
+            
+                    
+                    22.4 CPU caches
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.5" data-path="../lec22-meltdown-robert/22.5-flush-and-reload.html">
+            
+                <a href="../lec22-meltdown-robert/22.5-flush-and-reload.html">
+            
+                    
+                    22.5 Flush and Reload
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.6" data-path="../lec22-meltdown-robert/22.6-meltdown-attack.html">
+            
+                <a href="../lec22-meltdown-robert/22.6-meltdown-attack.html">
+            
+                    
+                    22.6 Meltdown Attack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.20.7" data-path="../lec22-meltdown-robert/22.7-meltdown-fix.html">
+            
+                <a href="../lec22-meltdown-robert/22.7-meltdown-fix.html">
+            
+                    
+                    22.7 Meltdown Fix
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21" data-path="../lec23-rcu-robert/">
+            
+                <a href="../lec23-rcu-robert/">
+            
+                    
+                    Lec23 RCU (Robert)
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.21.1" data-path="../lec23-rcu-robert/23.1-shi-yong-suo-dai-lai-de-wen-ti.html">
+            
+                <a href="../lec23-rcu-robert/23.1-shi-yong-suo-dai-lai-de-wen-ti.html">
+            
+                    
+                    23.1 使用锁带来的问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.2" data-path="../lec23-rcu-robert/23.2-du-xie-suo-readwrite-lock.html">
+            
+                <a href="../lec23-rcu-robert/23.2-du-xie-suo-readwrite-lock.html">
+            
+                    
+                    23.2 读写锁 (Read-Write Lock)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.3" data-path="../lec23-rcu-robert/23.3-rcu-shi-xian-1-ji-ben-shi-xian.html">
+            
+                <a href="../lec23-rcu-robert/23.3-rcu-shi-xian-1-ji-ben-shi-xian.html">
+            
+                    
+                    23.3 RCU实现(1) - 基本实现
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.4" data-path="../lec23-rcu-robert/23.4-rcu-shi-xian-2-memory-barrier.html">
+            
+                <a href="../lec23-rcu-robert/23.4-rcu-shi-xian-2-memory-barrier.html">
+            
+                    
+                    23.4 RCU实现(2) - Memory barrier
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.5" data-path="../lec23-rcu-robert/23.5-rcu-shi-xian-3-du-xie-xian-zhi.html">
+            
+                <a href="../lec23-rcu-robert/23.5-rcu-shi-xian-3-du-xie-xian-zhi.html">
+            
+                    
+                    23.5 RCU实现(3) - 读写规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.6" data-path="../lec23-rcu-robert/23.6-rcu-yong-li-dai-ma.html">
+            
+                <a href="../lec23-rcu-robert/23.6-rcu-yong-li-dai-ma.html">
+            
+                    
+                    23.6 RCU用例代码
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.21.7" data-path="../lec23-rcu-robert/23.7-rcu-zong-jie.html">
+            
+                <a href="../lec23-rcu-robert/23.7-rcu-zong-jie.html">
+            
+                    
+                    23.7 RCU总结
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://github.com/honkit/honkit" target="blank" class="gitbook-link">
+            Published with HonKit
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >6.5 uservec函数</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="65-uservec函数">6.5 uservec函数</h1>
+<p>回到XV6和RISC-V，现在程序位于trampoline page的起始，也是uservec函数的起始。我们现在需要做的第一件事情就是保存寄存器的内容。在RISC-V上，如果不能使用寄存器，基本上不能做任何事情。所以，对于保存这些寄存器，我们有什么样的选择呢？</p>
+<p>在一些其他的机器中，我们或许直接就将32个寄存器中的内容写到物理内存中某些合适的位置。但是我们不能在RISC-V中这样做，因为在RISC-V中，supervisor mode下的代码不允许直接访问物理内存。所以我们只能使用page table中的内容，但是从前面的输出来看，page table中也没有多少内容。</p>
+<p>虽然XV6并没有使用，但是另一种可能的操作是，直接将SATP寄存器指向kernel page table，之后我们就可以直接使用所有的kernel mapping来帮助我们存储用户寄存器。这是合法的，因为supervisor mode可以更改SATP寄存器。但是在trap代码当前的位置，也就是trap机制的最开始，我们并不知道kernel page table的地址。并且更改SATP寄存器的指令，要求写入SATP寄存器的内容来自于另一个寄存器。所以，为了能执行更新page table的指令，我们需要一些空闲的寄存器，这样我们才能先将page table的地址存在这些寄存器中，然后再执行修改SATP寄存器的指令。</p>
+<p>对于保存用户寄存器，XV6在RISC-V上的实现包括了两个部分。第一个部分是，XV6在每个user page table映射了trapframe page，这样每个进程都有自己的trapframe page。这个page包含了很多有趣的数据，但是现在最重要的数据是用来保存用户寄存器的32个空槽位。所以，在trap处理代码中，现在的好消息是，我们在user page table有一个之前由kernel设置好的映射关系，这个映射关系指向了一个可以用来存放这个进程的用户寄存器的内存位置。这个位置的虚拟地址总是0x3ffffffe000。</p>
+<p>如果你想查看XV6在trapframe page中存放了什么，这部分代码在proc.h中的trapframe结构体中。</p>
+<p><img src="../.gitbook/assets/image (731" alt=""></img>.png&gt;)</p>
+<p>你可以看到很多槽位的名字都对应了特定的寄存器。在最开始还有5个数据，这些是内核事先存放在trapframe中的数据。比如第一个数据保存了kernel page table地址，这将会是trap处理代码将要加载到SATP寄存器的数值。</p>
+<p>所以，如何保存用户寄存器的一半答案是，内核非常方便的将trapframe page映射到了每个user page table。</p>
+<p>另一半的答案在于我们之前提过的SSCRATCH寄存器。这个由RISC-V提供的SSCRATCH寄存器，就是为接下来的目的而创建的。在进入到user space之前，内核会将trapframe page的地址保存在这个寄存器中，也就是0x3fffffe000这个地址。更重要的是，RISC-V有一个指令允许交换任意两个寄存器的值。而SSCRATCH寄存器的作用就是保存另一个寄存器的值，并将自己的值加载给另一个寄存器。如果我查看trampoline.S代码，</p>
+<p><img src="../.gitbook/assets/image (749" alt=""></img>.png&gt;)</p>
+<p>第一件事情就是执行csrrw指令，这个指令交换了a0和sscratch两个寄存器的内容。为了看这里的实际效果，我们来打印a0，</p>
+<p><img src="../.gitbook/assets/image (847" alt=""></img>.png&gt;)</p>
+<p>a0现在的值是0x3fffffe000，这是trapframe page的虚拟地址。它之前保存在SSCRATCH寄存器中，但是我们现在交换到了a0中。我们也可以打印SSCRATCH寄存器，</p>
+<p><img src="../.gitbook/assets/image (849" alt=""></img>.png&gt;)</p>
+<p>它现在的内容是2，这是a0寄存器之前的值。a0寄存器保存的是write函数的第一个参数，在这个场景下，是Shell传入的文件描述符2。所以我们现在将a0的值保存起来了，并且我们有了指向trapframe page的指针。现在我们正在朝着保存用户寄存器的道路上前进。实际上，这就是trampoline.S中接下来30多个奇怪指令的工作。这些指令就是的执行sd，将每个寄存器保存在trapframe的不同偏移位置。因为a0在交换完之后包含的是trapframe page地址，也就是0x3fffffe000。所以，每个寄存器被保存在了偏移量+a0的位置。这些存储的指令比较无聊，我就不介绍了。</p>
+<blockquote>
+<p>学生提问：当与a0寄存器进行交换时，trapframe的地址是怎么出现在SSCRATCH寄存器中的？</p>
+<p>Robert教授：在内核前一次切换回用户空间时，内核会执行set sscratch指令，将这个寄存器的内容设置为0x3fffffe000，也就是trapframe page的虚拟地址。所以，当我们在运行用户代码，比如运行Shell时，SSCRATCH保存的就是指向trapframe的地址。之后，Shell执行了ecall指令，跳转到了trampoline page，这个page中的第一条指令会交换a0和SSCRATCH寄存器的内容。所以，SSCRATCH中的值，也就是指向trapframe的指针现在存储与a0寄存器中。</p>
+<p>同一个学生提问：这是发生在进程创建的过程中吗？这个SSCRATCH寄存器存在于哪？</p>
+<p>Robert教授：这个寄存器存在于CPU上，这是CPU上的一个特殊寄存器。内核在什么时候设置的它呢？这有点复杂。它被设置的实际位置，我们可以看下图，</p>
+</blockquote>
+<p><img src="../.gitbook/assets/image (750" alt=""></img>.png&gt;)</p>
+<blockquote>
+<p>选中的代码是内核在返回到用户空间之前执行的最后两条指令。在内核返回到用户空间时，会恢复所有的用户寄存器。之后会再次执行交换指令，csrrw。因为之前内核已经设置了a0保存的是trap frame地址，经过交换之后SSCRATCH仍然指向了trapframe page地址，而a0也恢复成了之前的数值。最后sret返回到了用户空间。</p>
+<p>你或许会好奇，a0是如何有trapframe page的地址。我们可以查看trap.c代码，</p>
+</blockquote>
+<p><img src="../.gitbook/assets/image (699" alt=""></img>.png&gt;)</p>
+<blockquote>
+<p>这是内核返回到用户空间的最后的C函数。C函数做的最后一件事情是调用fn函数，传递的参数是TRAMFRAME和user page table。在C代码中，当你调用函数，第一个参数会存在a0，这就是为什么a0里面的数值是指向trapframe的指针。fn函数是就是刚刚我向你展示的位于trampoline.S中的代码。</p>
+<p>学生提问：当你启动一个进程，之后进程在运行，之后在某个时间点进程执行了ecall指令，那么你是在什么时候执行上一个问题中的fn函数呢？因为这是进程的第一个ecall指令，所以这个进程之前应该没有调用过fn函数吧。</p>
+<p>Robert教授：好的，或许对于这个问题的一个答案是：一台机器总是从内核开始运行的，当机器启动的时候，它就是在内核中。 任何时候，不管是进程第一次启动还是从一个系统调用返回，进入到用户空间的唯一方法是就是执行sret指令。sret指令是由RISC-V定义的用来从supervisor mode转换到user mode。所以，在任何用户代码执行之前，内核会执行fn函数，并设置好所有的东西，例如SSCRATCH，STVEC寄存器。</p>
+<p>学生提问：当我们在汇编代码中执行ecall指令，是什么触发了trampoline代码的执行，是CPU中的从user到supervisor的标志位切换吗？</p>
+<p>Robert教授：在我们的例子中，Shell在用户空间执行了ecall指令。ecall会完成几件事情，ecall指令会设置当前为supervisor mode，保存程序计数器到SEPC寄存器，并且将程序计数器设置成控制寄存器STVEC的内容。STVEC是内核在进入到用户空间之前设置好的众多数据之一，内核会将其设置成trampoline page的起始位置。所以，当ecall指令执行时，ecall会将STVEC拷贝到程序计数器。之后程序继续执行，但是却会在当前程序计数器所指的地址，也就是trampoline page的起始地址执行。</p>
+<p>学生提问：寄存器保存在了trapframe page，但是这些寄存器用户程序也能访问，为什么我们要使用内存中一个新的区域（指的是trapframe page），而不是使用程序的栈？</p>
+<p>Robert教授：好的，这里或许有两个问题。第一个是，为什么我们要保存寄存器？为什么内核要保存寄存器的原因，是因为内核即将要运行会覆盖这些寄存器的C代码。如果我们想正确的恢复用户程序，我们需要将这些寄存器恢复成它们在ecall调用之前的数值，所以我们需要将所有的寄存器都保存在trapframe中，这样才能在之后恢复寄存器的值。</p>
+<p>另一个问题是，为什么这些寄存器保存在trapframe，而不是用户代码的栈中？这个问题的答案是，我们不确定用户程序是否有栈，必然有一些编程语言没有栈，对于这些编程语言的程序，Stack Pointer不指向任何地址。当然，也有一些编程语言有栈，但是或许它的格式很奇怪，内核并不能理解。比如，编程语言以堆中以小块来分配栈，编程语言的运行时知道如何使用这些小块的内存来作为栈，但是内核并不知道。所以，如果我们想要运行任意编程语言实现的用户程序，内核就不能假设用户内存的哪部分可以访问，哪部分有效，哪部分存在。所以内核需要自己管理这些寄存器的保存，这就是为什么内核将这些内容保存在属于内核内存的trapframe中，而不是用户内存。</p>
+</blockquote>
+<p>程序现在仍然在trampoline的最开始，也就是uservec函数的最开始，我们基本上还没有执行任何内容。我在寄存器拷贝的结束位置设置了一个断点，我们在gdb中让代码继续执行，现在我们停在了下面这条ld（load）指令。</p>
+<p><img src="../.gitbook/assets/image (196" alt=""></img>.png&gt;)</p>
+<p>这条指令正在将a0指向的内存地址往后数的第8个字节开始的数据加载到Stack Pointer寄存器。a0的内容现在是trapframe page的地址，从本节第一张图中，trapframe的格式可以看出，第8个字节开始的数据是内核的Stack Pointer（kernel_sp）。trapframe中的kernel_sp是由kernel在进入用户空间之前就设置好的，它的值是这个进程的kernel stack。所以这条指令的作用是初始化Stack Pointer指向这个进程的kernel stack的最顶端。指向完这条指令之后，我们打印一下当前的Stack Pointer寄存器，</p>
+<p><img src="../.gitbook/assets/image (269" alt=""></img>.png&gt;)</p>
+<p>这是这个进程的kernel stack。因为XV6在每个kernel stack下面放置一个guard page，所以kernel stack的地址都比较大。</p>
+<p>下一条指令是向tp寄存器写入数据。因为在RISC-V中，没有一个直接的方法来确认当前运行在多核处理器的哪个核上，XV6会将CPU核的编号也就是hartid保存在tp寄存器。在内核中好几个地方都会使用了这个值，例如，内核可以通过这个值确定某个CPU核上运行了哪些进程。我们执行这条指令，并且打印tp寄存器。</p>
+<p><img src="../.gitbook/assets/image (293" alt=""></img>.png&gt;)</p>
+<p>我们现在运行在CPU核0，这说的通，因为我之前配置了QEMU只给XV6分配一个核，所以我们只能运行在核0上。</p>
+<p>下一条指令是向t0寄存器写入数据。这里写入的是我们将要执行的第一个C函数的指针，也就是函数usertrap的指针。我们在后面会使用这个指针。</p>
+<p><img src="../.gitbook/assets/image (287" alt=""></img>.png&gt;)</p>
+<p>下一条指令是向t1寄存器写入数据。这里写入的是kernel page table的地址，我们可以打印t1寄存器的内容。</p>
+<p><img src="../.gitbook/assets/image (187" alt=""></img>.png&gt;)</p>
+<p>实际上严格来说，t1的内容并不是kernel page table的地址，这是你需要向SATP寄存器写入的数据。它包含了kernel page table的地址，但是移位了（注，详见4.3），并且包含了各种标志位。</p>
+<p>下一条指令是交换SATP和t1寄存器。这条指令执行完成之后，当前程序会从user page table切换到kernel page table。现在我们在QEMU中打印page table，可以看出与之前的page table完全不一样。</p>
+<p><img src="../.gitbook/assets/image (348" alt=""></img>.png&gt;)</p>
+<p>现在这里输出的是由内核设置好的巨大的kernel page table。所以现在我们成功的切换了page table，我们在这个位置进展的很好，Stack Pointer指向了kernel stack；我们有了kernel page table，可以读取kernel data。我们已经准备好了执行内核中的C代码了。</p>
+<p>这里还有个问题，为什么代码没有崩溃？毕竟我们在内存中的某个位置执行代码，程序计数器保存的是虚拟地址，如果我们切换了page table，为什么同一个虚拟地址不会通过新的page table寻址走到一些无关的page中？看起来我们现在没有崩溃并且还在执行这些指令。有人来猜一下原因吗？</p>
+<blockquote>
+<p>学生回答：因为我们还在trampoline代码中，而trampoline代码在用户空间和内核空间都映射到了同一个地址。</p>
+</blockquote>
+<p>完全正确。我不知道你们是否还记得user page table的内容，trampoline page在user page table中的映射与kernel page table中的映射是完全一样的。这两个page table中其他所有的映射都是不同的，只有trampoline page的映射是一样的，因此我们在切换page table时，寻址的结果不会改变，我们实际上就可以继续在同一个代码序列中执行程序而不崩溃。这是trampoline page的特殊之处，它同时在user page table和kernel page table都有相同的映射关系。</p>
+<p>之所以叫trampoline page，是因为你某种程度在它上面“弹跳”了一下，然后从用户空间走到了内核空间。</p>
+<p>最后一条指令是<em>jr t0</em>。执行了这条指令，我们就要从trampoline跳到内核的C代码中。这条指令的作用是跳转到t0指向的函数中。我们打印t0对应的一些指令，</p>
+<p><img src="../.gitbook/assets/image (285" alt=""></img>.png&gt;)</p>
+<p>可以看到t0的位置对应于一个叫做usertrap函数的开始。接下来我们就要以kernel stack，kernel page table跳转到usertrap函数。</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="6.4-ecall-zhi-ling-zhi-hou-de-zhuang-tai.html" class="navigation navigation-prev " aria-label="Previous page: 6.4 ECALL指令之后的状态">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="6.6-usertrap.html" class="navigation navigation-next " aria-label="Next page: 6.6 usertrap函数">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"6.5 uservec函数","level":"1.6.5","depth":2,"next":{"title":"6.6 usertrap函数","level":"1.6.6","depth":2,"path":"lec06-isolation-and-system-call-entry-exit-robert/6.6-usertrap.md","ref":"lec06-isolation-and-system-call-entry-exit-robert/6.6-usertrap.md","articles":[]},"previous":{"title":"6.4 ECALL指令之后的状态","level":"1.6.4","depth":2,"path":"lec06-isolation-and-system-call-entry-exit-robert/6.4-ecall-zhi-ling-zhi-hou-de-zhuang-tai.md","ref":"lec06-isolation-and-system-call-entry-exit-robert/6.4-ecall-zhi-ling-zhi-hou-de-zhuang-tai.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":["livereload"],"pluginsConfig":{"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56},"embedFonts":false},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"lec06-isolation-and-system-call-entry-exit-robert/6.5-uservec.md","mtime":"2026-03-15T11:51:01.989Z","type":"markdown"},"gitbook":{"version":"6.1.6","time":"2026-03-15T12:14:16.370Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <noscript>
+        <style>
+            .honkit-cloak {
+                display: block !important;
+            }
+        </style>
+    </noscript>
+    <script>
+        // Restore sidebar state as critical path for prevent layout shift
+        function __init__getSidebarState(defaultValue){
+            var baseKey = "";
+            var key = baseKey + ":sidebar";
+            try {
+                var value = localStorage[key];
+                if (value === undefined) {
+                    return defaultValue;
+                }
+                var parsed = JSON.parse(value);
+                return parsed == null ? defaultValue : parsed;
+            } catch (e) {
+                return defaultValue;
+            }
+        }
+        function __init__restoreLastSidebarState() {
+            var isMobile = window.matchMedia("(max-width: 600px)").matches;
+            if (isMobile) {
+                // Init last state if not mobile
+                return;
+            }
+            var sidebarState = __init__getSidebarState(true);
+            var book = document.querySelector(".book");
+            // Show sidebar if it enabled
+            if (sidebarState && book) {
+                book.classList.add("without-animation", "with-summary");
+            }
+        }
+
+        try {
+            __init__restoreLastSidebarState();
+        } finally {
+            var book = document.querySelector(".book");
+            book.classList.remove("honkit-cloak");
+        }
+    </script>
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/@honkit/honkit-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
