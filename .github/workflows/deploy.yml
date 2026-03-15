@@ -1,0 +1,44 @@
+name: Deploy GitBook to Pages
+
+on:
+  push:
+    branches: ["master"] # 如果你的主分支叫 main，请改为 main
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # 使用现代 Node 版本
+
+      - name: Install Dependencies and Build
+        run: |
+          # 使用 npx 直接运行 honkit，无需全局安装
+          # 它会自动识别你的 SUMMARY.md 并编译
+          npx honkit build
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './_book' # GitBook 默认生成的文件夹
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
